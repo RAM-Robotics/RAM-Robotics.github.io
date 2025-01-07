@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAM Robotics | Home of ARIS</title>
+    <link rel="icon" type="image/x-icon" href="/Media/favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header" role="banner">
         <div class="container-header">
             <div class="header-inner">
                 <!-- <h1 class="logo">ARIS Solutions Ltd</h1> -->
-                <img class="logo-img" src="Media/RAM Robotics Logo basic.png"  height="85px">
+                <a href =""><img class="logo-img" src="Media/RAM_LOGO_286FB7_inv_transparent.png"  height="55px"></a>
                 <nav class="main-nav">
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#what">What is ARIS?</a></li>
+                        <li><a href="#what">ARIS</a></li>
                         <li><a href="#who">About Us</a></li>
                         <li><a href="#pub">Our Future</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -25,56 +29,321 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to RAM Robotics</h2>
-            <h3>The Home of ARIS</h3>
-            <p></p>
-            <p>The Autonomous Riser Inspection System</p>
-            <a href="Links/One Page Meeting Resource v8.pdf" target="_blank" class="btn">Learn More</a>
-        </div>
+    <section id="home" class="start-video">
+        
+            <video preload="auto" loop autoplay muted id="myVideo">
+                <source src='Media/Prototype Drive Cycle.mp4' type='video/mp4' />
+            </video>
+
+            <div class = "overlay">
+                <div class="container">
+                    <h2>Welcome to RAM Robotics</h2>
+                    <h3>The Home of ARIS</h3>
+                    <!-- <p></p>
+                    <p>The Autonomous Riser Inspection System</p> -->
+                    <!-- <a href="Links/One Page Meeting Resource v8.pdf" target="_blank" class="btn">Learn More</a> -->
+                </div>
+            </div>
+        
     </section>
 
-    <section id="what" class="content">
-        <div class="container">
-            <h2>What is ARIS?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3exDq29juQI?si=xPXqnh_VEXTjzfjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section id="quote" class="content">
+        <div class="quote-overlay">
+            <div class="container">
+                <blockquote class="hero-quote">
+                    "To improve the <b>reliability</b> and <b>availability</b> of <b>sustainable energy systems</b> through the development of <b>innovative remote & autonomous maintenance solutions</b>."
+                </blockquote>
+                <p style="text-align: right; font-family: Georgia, 'Times New Roman', Times, serif;font-style: italic;">- RAM Robotics Mission Statement</p>
+                <!-- <h2>Welcome to RAM Robotics</h2>
+                <h3>The Home of ARIS</h3>
+                <p></p>
+                <p>The Autonomous Riser Inspection System</p>
+                <a href="Links/One Page Meeting Resource v8.pdf" target="_blank" class="btn">Learn More</a> -->
+            </div>
         </div>
+        
     </section>
+
+    <section id="what" class="content-tsp">
+        
+        <div class="container">
+            <div class="con-text">
+                <h2>ARIS</h2>
+                <p>ARIS, the Autonomous Riser Inspection System, aims to reduce cable maintenance costs for Floating Offshore Wind Turbines by up to 75%, using innovative on-cable inspection.</p> 
+            </div>
+            <div class="aris-tiles">
+                <div class="tile">
+                    <video preload="auto" loop autoplay muted class="tile-img">
+                        <source src='Media/Exploded View.mp4' type='video/mp4' />
+                    </video>
+                    <div class="tile-text">
+                        <h3>Objective</h3>
+                        <p>ARIS, the Autonomous Riser Inspection System, aims to reduce cable maintenance costs for Floating Offshore Wind Turbines by up to 75%, using innovative on-cable inspection.</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    
+                    <div class="tile-text">
+                        <h3>What is ARIS?</h3>
+                        <p>A small robot autonomously traverses the cable, providing a modular platform to deploy proven off-the-shelf sensors tailored to inspection objectives. Multiple robots can be deployed in parallel, for maximum deployment cost efficiency.</p>
+                    </div>
+                    <video preload="auto" loop autoplay muted class="tile-img">
+                        <source src='Media/Render Drive Cycle.mp4' type='video/mp4' />
+                    </video>
+                </div>
+                <div class="tile">
+                    <video preload="auto" loop autoplay muted class="tile-img">
+                        <source src='Media/prototype crack detection.mp4' type='video/mp4' />
+                    </video>
+                    <div class="tile-text">
+                        <h3>Sensing</h3>
+                        <p>A 360 degree inspection can be achieved, and defects localised to 3% accuracy using odometry. ARIS has so-far been demonstrated for visual inspections, using a machine vision algorithm to autonomously identifying damage to the cable sheath. Commercially available ultrasonic or thermal sensors will identify hidden defects, like water ingress or conductor issues.</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    
+                    <div class="tile-text">
+                        <h3>Deployment</h3>
+                        <p>Deployment is anticipated to be from smaller, more cost-effective vessels than existing ROV inspections. Defects can be identified early and remedial works executed at ~25% of the cost of replacing a failed cable.</p>
+                    </div>
+                    <video preload="auto" loop autoplay muted class="tile-img">
+                        <source src='Media/prototype attach.mp4' type='video/mp4' />
+                    </video>
+                </div>
+            </div>
+            <!-- <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3exDq29juQI?si=xPXqnh_VEXTjzfjM"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div> -->
+            <!-- Container for the image gallery -->
+            
+        </div>
+        <!-- <div class="gallery-container">
+
+            <!-- Full-width images with number text 
+            <div class="mySlides">
+            <div class="numbertext">1 / 8</div>
+                <img src="Media/Picture1.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">2 / 8</div>
+                <img src="Media/Picture6.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">3 / 8</div>
+                <video controls style="width:100%">
+                    <source src="Media/jaw explosion.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">4 / 8</div>
+            <video controls style="width:100%">
+                <source src="Media/Jaw attach.mp4" type="video/mp4">
+            </video>
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
+            <video controls style="width:100%">
+                <source src="Media/prototype attach.mp4" type="video/mp4">
+            </video>
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+            <video controls style="width:100%">
+                <source src="Media/Render turntable.mp4" type="video/mp4">
+            </video>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <video controls style="width:100%">
+                    <source src="Media/Render Drive Cycle.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <video controls style="width:100%">
+                    <source src="Media/Prototype Pass Attempt.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <!-- Next and previous buttons 
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <!-- Image text 
+            <div class="caption-container">
+            <p id="caption"></p>
+            </div>
+        
+            <!-- Thumbnail images 
+            <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="Media/Picture1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Render">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/Picture6.jpg" style="width:100%" onclick="currentSlide(2)" alt="Prototype">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/jaw explosion tb.png" style="width:100%" onclick="currentSlide(3)" alt="Jaw Deconstructed">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/jaw attach tb.png" style="width:100%" onclick="currentSlide(4)" alt="Render Jaw Attach">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/prototype attach tb.png" style="width:100%" onclick="currentSlide(5)" alt="Prototype Attach">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/render turntable tb.png" style="width:100%" onclick="currentSlide(6)" alt="Render Turntable">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/render drive cycle tb.png" style="width:100%" onclick="currentSlide(7)" alt="Render Drive Cycle">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="Media/prototype pass attempt tb.png" style="width:100%" onclick="currentSlide(8)" alt="Prototype Obstacle Avoidance">
+            </div>
+            </div>
+        </div> -->
+    </section>
+
+    
 
     <section id="who" class="content">
         <div class="container">
             <div class="con-inner">
                 <div class="con-text">
-                    <h2>Who Are We?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>    
+                    <h2>About Us</h2>
+                    <p>The team has a professional background solving challenging engineering problems in a range of sectors including nuclear robotics, fusion energy and maritime. The experience gained in these sectors allows RAM Robotics to deliver bespoke, first of a kind solutions capable of safely operating in extreme conditions.</p> 
+                    <p></p>
+                    <p>The team was first formed at the University of Southampton for a group design project, where the resulting research into floating off-shore wind O&M highlighted unique challenges faced by the industry. As a key technology in the endeavor to meet net zero, the team (being engineers) looked for a solution. The problem of premature riser cable failure was selected and the ARIS project was born.</p>
+                    <p></p>
+                    <p>After completed masters degrees in engineering, ARIS was put on pause and the team went separate ways gaining a diverse professional engineering experience in a range of industries.</p>  
+                    <p></p>
+                    <p>Now as a small agile team of ambitious engineers, we are back as RAM Robotics Ltd to take on challenging maintenance and inspection problems - starting with riser cable failures.</p>     
                 </div>
-                <img class="con-img" src="Media/ARIS\ 0.1\ Prototype.jpg">
+                <img class="con-img" src="Media/20210607_184938 (2).jpg">
             </div>            
         </div>
     </section>
 
     
 
-    <section id="pub" class="content">
+    <section id="pub" class="content-tsp">
         <div class="container">
-            <h2>Publication</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="con-text">
+                <h2>Our Future</h2>
+                <p>To meet our Mission Statement, we will need to explore the below steps to bring ARIS to its full capability.</p> 
+                <p></p>
+            </div>
+            <div class="future-tiles">
+                <div class="tile">
+                    <img class="tile-img" src="Media/Cable Video 10298.jpg">
+                    <div class="tile-text">
+                        <h3>Funding and Innovation</h3>
+                        <p>Having taken the first step by setting up RAM Robotics we are now looking for funding to continue the technical development of ARIS</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <img class="tile-img" src="Media/Picture4.jpg">
+                    <div class="tile-text">
+                        <h3>Proof of concept</h3>
+                        <p>Take historical achievements and lessons learnt to develop a functioning proof of concept</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <img class="tile-img" src="Media/Rear Iso.png">
+                    <div class="tile-text">
+                        <h3>Industry Partners</h3>
+                        <p>Collaborating with leading entities in the offshore industry will be key to ARIS addressing their needs as effectively as possible</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="content-last">
+    <!-- <section id="contact" class="content-last">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class = "con-inner-contact">
+                <div class="con-text">
+                    <h2>Contact Us</h2>
+                    <p>If you'd like to learn more or get in contact with the team, you can contact us on <a href="mailto:info@ramrobotics.co.uk">info@ramrobotics.co.uk</a>. Or visit us on LinkedIn.</p>
+                </div>
+                <a href = "https://www.linkedin.com/company/ram-robotics/"><img class="LI-img" src="Media/LI-Logo.png"></a>
+            </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </section> -->
+    <footer class="footer2">
+        <div class="container-footer">
+            <div class = "con-inner-contact">
+                <div class="con-text">
+                    <h2>Contact Us</h2>
+                    <p>If you'd like to learn more or get in contact with the team, you can contact us on <a href="mailto:info@ramrobotics.co.uk">info@ramrobotics.co.uk</a>. Or visit us on LinkedIn.</p>
+                </div>
+                <a href = "https://www.linkedin.com/company/ram-robotics/"><img class="LI-img" src="Media/LI-In-Bug white.png"></a>
+            </div>
+            <div class="copyright">
+                <p></br></p>
+                <p>&copy; 2024 RAM Robotics Ltd. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class = "con-inner-contact">
+                <div class="con-text">
+                    <h2>Contact Us</h2>
+                    <p>If you'd like to learn more or get in contact with the team, you can contact us on <a href="mailto:info@ramrobotics.co.uk">info@ramrobotics.co.uk</a>. Or visit us on LinkedIn.</p>
+                </div>
+                <a href = "https://www.linkedin.com/company/ram-robotics/"><img class="LI-img" src="Media/LI-In-Bug white.png"></a>
+            </div>
+            <div class="copyright">
+                <p></br></p>
+                <p>&copy; 2024 RAM Robotics Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            const allVideos = document.querySelectorAll(".mySlides video");
+            allVideos.forEach(video => video.pause());
+        }
+    </script> -->
 </body>
 </html>

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     background-image: url('Media/Picture3.jpg');
@@ -112,6 +112,30 @@ a:link {
     text-decoration: underline;
   }
 
+#contact a:link {
+    color: #555;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: purple;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #447FC6;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 .header .logo {
     font-size: 24px;
 }
@@ -139,13 +163,152 @@ a:link {
     color: #fff;
     text-decoration: none;
 }
+@media (max-width: 425px) {
+    .main-nav ul li a {
+        font-size: 10px;
+    }
 
+    .main-nav ul li {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 320px) {
+    .main-nav ul li a {
+        font-size: 8px;
+    }
+
+    .main-nav ul li {
+        margin-right: 5px;
+    }
+}
+
+#what {
+    scroll-margin-top: 80px;
+}
+#who {
+    scroll-margin-top: 80px;
+}
+#pub {
+    scroll-margin-top: 80px;
+}
+#contact {
+    scroll-margin-top: 80px;
+}
+
+/* Video Section */
+.start-video {
+    position: relative;
+    height: 100vh; /* This ensures the video covers the full height of the viewport */
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0; /* Start transparent */
+    animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in animation */
+}
+
+.overlay .container h2 {
+    font-size: 48px; /* Larger font size */
+    margin-bottom: 20px;
+    margin-top: 80px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.overlay .container h3 {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 2.6s;
+}
+
+.overlay .container p {
+    font-size: 20px; /* Larger font size */
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1.4s;
+}
+
+@media (max-width: 768px) {
+    .overlay .container h2 {
+        font-size: 32px;
+    }
+
+    .overlay .container h3 {
+        font-size: 24px;
+    }
+
+    .overlay .container p {
+        font-size: 16px;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    /* padding-top: 56.25%; /* 16:9 aspect ratio 
+    height: 0;
+    overflow: hidden; */
+    width: 100%; /* Ensures it doesn’t exceed the container width */
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    background: #000; /* Optional: gives a black background to avoid white space */
+    margin: 20px auto; /* Center the video with some spacing */
+}
+
+.video-wrapper iframe {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+}
+/* @media (min-width: 1024px) {
+    .video-wrapper {
+        max-width: 800px; /* Limits the width of the video on larger screens 
+        max-height: 450px;
+    }
+} */
 /* Hero Section */
 .hero {
     
     margin: 0 auto;
     color: #fff;
-    padding: 100px 0 100px;
+    padding: 0px 0 0px;
     text-align: center;
 }
 
@@ -155,7 +318,7 @@ a:link {
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 30px;
 }
 
@@ -172,15 +335,131 @@ a:link {
 .hero .btn:hover {
     background-color: #6d97ca;
 }
-
+.quote-overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); Adjust the opacity for better text readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.hero-quote {
+    font-size: 42px; /* Adjust the size for visibility */
+    max-width: 1300px; /* Control the width for better readability */
+    margin: 0 auto;
+    line-height: 1.4;
+    font-style: italic; /* Style as a quotation */
+    font-family: 'Orbitron', serif;
+}
+/* .hero-quote p{
+    text-align: right;
+} */
+.gallery-container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    /* left:0; */
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    object-fit: cover;
+    width: 25%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
 /* Content Section */
 .content,.content-last {
     padding: 0 0;
     text-align: center;
     color: #333;
     background-color: #fff;
-    margin: 40px 20px;
-    border-radius: 10px;
+    margin: 0px 0px;
+    border-radius: 0px;
+}
+.content-tsp {
+    padding: 0 0;
+    text-align: center;
+    color: #fff;
+    /* background-color: #fff; */
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0px 0px;
+    border-radius: 0px;
 }
 
 .content-last{
@@ -189,18 +468,22 @@ a:link {
 
 .con-inner {
     display: flex;
-    justify-content: space-between;
-    align-items: top;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    gap:10px;
+    align-items: center;
 }
 
 .con-text {
     text-align: left;
-    padding: 0 30px;
+    padding: 0 0px;
 }
 
 .con-img {
     display: flex;
     border-radius: 5px;
+    width: 50%;
+    height: 50%;
 }
 
 .content h2 {
@@ -212,20 +495,198 @@ a:link {
     font-size: 16px;
     margin-bottom: 20px;
 }
+.con-inner-contact {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    gap:10px;
+    align-items: center;
+}
+.LI-img {
+    display: flex;
+    /* border-radius: 5px; */
+    max-width: 50px;
+    /* height: 50%; */
+}
+
+.future-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tile {
+    background: #fff; /* Card background color */
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures the image stays within rounded corners */
+    max-width: 300px; /* Limits width of cards */
+    flex: 1 1 300px; /* Allows flexibility while keeping a minimum size */
+    transition: transform 0.3s; /* Adds smooth scaling effect */
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let card grow based on content */
+    /* min-height: 400px; */
+}
+.tile:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+}
+.tile-img {
+    width: 100%; /* Makes image fill the card's width */
+    height: 50%; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+}
+
+.tile-text {
+    padding: 15px;
+    text-align: center; /* Centers the text */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tile-text h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #1a1a2e; /* Darker text color for contrast */
+}
+
+.tile-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555; /* Softer color for text */
+    /* flex-grow: 1; */
+}
+.aris-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    padding: 20px;
+}
+
+.aris-tiles .tile {
+    background: #fff; /* Card background color */
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures the image stays within rounded corners */
+    max-width: 2200px; /* Limits width of cards */
+    width: 100%;
+    flex: 1 1 2200px; /* Allows flexibility while keeping a minimum size */
+    transition: transform 0.3s; /* Adds smooth scaling effect */
+    display: flex;
+    flex-direction: row;
+    height: auto; /* Let card grow based on content */
+    max-height: 300px;
+}
+.aris-tiles .tile-img {
+    max-width: 40%; /* Makes image fill the card's width */
+    height: 100%; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+}
+
+
 
 
 /* Footer */
 .footer {
     background-color: #286FB7;
     color: #fff;
-    padding: 10px 0px 10px;
+    padding: 5px 5px ;
     text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 1000; 
 }
-
+.footer2 {
+    background-color: #286FB7;
+    color: #fff;
+    padding: 5px 5px ;
+    text-align: center;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+    /* z-index: 1000;  */
+}
+.container-footer {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+.footer h2 {
+    font-size: 24px;
+}
 .footer p {
     font-size: 14px;
+}
+.footer2 h2 {
+    font-size: 24px;
+}
+.footer2 p {
+    font-size: 14px;
+}
+.copyright p {
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .future-tiles {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .tile {
+        max-width: 100%;
+    }
+    .con-inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .con-img{
+        width: 100%;
+        height: 100%;
+    }
+    .hero-quote{
+        font-size: 28px;
+    }
+    #what .tile {
+        flex-direction: column;
+        max-height: 600px; /* Remove height restriction on smaller screens */
+    }
+
+    #what .tile-img,
+    #what .tile-text {
+        max-width: 100%;
+    }
+
+    #what .tile-img {
+        height: 40%;
+    }
+    .footer h2 {
+        font-size: 14px;
+    }
+    .footer p {
+        font-size: 10px;
+    }
+    .footer2 h2 {
+        font-size: 14px;
+    }
+    .footer2 p {
+        font-size: 10px;
+    }
+    .copyright p {
+        font-size: 8px;
+    }
+    .LI-img {
+        display: flex;
+        /* border-radius: 5px; */
+        max-width: 30px;
+        /* height: 50%; */
+    }
 }
