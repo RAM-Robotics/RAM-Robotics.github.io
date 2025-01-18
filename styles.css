@@ -588,7 +588,7 @@ a:link {
 .aris-tiles .tile-img {
     max-width: 40%; /* Makes image fill the card's width */
     height: 100%; /* Fixed height for images */
-    object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+    object-fit: fill; /* Ensures the image covers the area while maintaining its aspect ratio */
 }
 
 
