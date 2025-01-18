@@ -638,11 +638,24 @@ a:link {
 
 @media (max-width: 768px) {
     .future-tiles {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
+        gap: 20px;
     }
     .tile {
         max-width: 100%;
+        display: flex;
+        flex-direction: column; /* Stack content inside tiles */
+        justify-content: space-between; /* Distribute content evenly */
+        height: auto; /* Let tiles expand based on content */
+        flex: 1; /* Allow tiles to grow equally */
+        overflow: hidden; /* Prevent content from spilling */
+    }
+    .tile-img {
+        width: 100%; /* Make images responsive */
+        height: 50%; /* Maintain image aspect ratio */
+        object-fit: cover; /* Ensure images don't stretch or distort */
     }
     .con-inner{
         flex-direction: column;
