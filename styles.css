@@ -357,6 +357,9 @@ a:link {
     font-style: italic; /* Style as a quotation */
     font-family: 'Space Grotesk', sans-serif;
 }
+.quote-name{
+    text-align: right;
+}
 /* .hero-quote p{
     text-align: right;
 } */
@@ -566,7 +569,7 @@ a:link {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 75px;
     padding: 20px;
 }
@@ -606,8 +609,8 @@ a:link {
     z-index: 1000; 
 }
 .footer2 {
-    background-color: #286FB7;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
     padding: 5px 5px ;
     text-align: center;
     /* position: fixed; */
@@ -651,15 +654,17 @@ a:link {
         height: auto; /* Let tiles expand based on content */
         flex: 1; /* Allow tiles to grow equally */
         overflow: hidden; /* Prevent content from spilling */
+        align-items: center;
     }
     .tile-img {
         width: 100%; /* Make images responsive */
         height: 50%; /* Maintain image aspect ratio */
         object-fit: cover; /* Ensure images don't stretch or distort */
+        max-height: 600px;
     }
     .con-inner{
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
     }
     .con-img{
         width: 100%;
@@ -671,6 +676,7 @@ a:link {
     #what .tile {
         flex-direction: column;
         max-height: 600px; /* Remove height restriction on smaller screens */
+        height: auto;
     }
 
     #what .tile-img,
@@ -680,6 +686,7 @@ a:link {
 
     #what .tile-img {
         height: 40%;
+        object-fit: fill;
     }
     .footer h2 {
         font-size: 14px;
@@ -701,5 +708,8 @@ a:link {
         /* border-radius: 5px; */
         max-width: 30px;
         /* height: 50%; */
+    }
+    .quote-name{
+        text-align: center;
     }
 }
