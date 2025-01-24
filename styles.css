@@ -589,7 +589,8 @@ a:link {
     max-height: 300px;
 }
 .aris-tiles .tile-img {
-    max-width: 40%; /* Makes image fill the card's width */
+   /* max-width: 35%; /* Makes image fill the card's width */
+    width:auto;
     height: 100%; /* Fixed height for images */
     object-fit: fill; /* Ensures the image covers the area while maintaining its aspect ratio */
 }
@@ -659,7 +660,7 @@ a:link {
     }
     .tile-img {
         width: 100%; /* Make images responsive */
-        height: 50%; /* Maintain image aspect ratio */
+        height: auto; /* Maintain image aspect ratio */
         object-fit: cover; /* Ensure images don't stretch or distort */
         max-height: 600px;
     }
@@ -686,7 +687,8 @@ a:link {
     }
 
     #what .tile-img {
-        height: 40%;
+        height: auto;
+        width: 100%;
         object-fit: fill;
     }
     .footer h2 {
