@@ -93,19 +93,19 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:visited {
     color: purple;
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:hover {
     color: #447FC6;
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:active {
     color: yellow;
     background-color: transparent;
@@ -117,19 +117,19 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:visited {
     color: purple;
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:hover {
     color: #447FC6;
     background-color: transparent;
     text-decoration: underline;
   }
-  
+
   a:active {
     color: yellow;
     background-color: transparent;
@@ -191,7 +191,7 @@ a:link {
 #pub {
     scroll-margin-top: 80px;
 }
-#contact {
+#dynamic-footer {
     scroll-margin-top: 80px;
 }
 
@@ -280,7 +280,7 @@ a:link {
 
 .video-wrapper {
     position: relative;
-    /* padding-top: 56.25%; /* 16:9 aspect ratio 
+    /* padding-top: 56.25%; /* 16:9 aspect ratio
     height: 0;
     overflow: hidden; */
     width: 100%; /* Ensures it doesn’t exceed the container width */
@@ -299,13 +299,13 @@ a:link {
 }
 /* @media (min-width: 1024px) {
     .video-wrapper {
-        max-width: 800px; /* Limits the width of the video on larger screens 
+        max-width: 800px; /* Limits the width of the video on larger screens
         max-height: 450px;
     }
 } */
 /* Hero Section */
 .hero {
-    
+
     margin: 0 auto;
     color: #fff;
     padding: 0px 0 0px;
@@ -366,17 +366,17 @@ a:link {
 .gallery-container {
     position: relative;
   }
-  
+
   /* Hide the images by default */
   .mySlides {
     display: none;
   }
-  
+
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
     cursor: pointer;
   }
-  
+
   /* Next & previous buttons */
   .prev,
   .next {
@@ -394,19 +394,19 @@ a:link {
     user-select: none;
     -webkit-user-select: none;
   }
-  
+
   /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
+
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+
   /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
@@ -415,7 +415,7 @@ a:link {
     position: absolute;
     top: 0;
   }
-  
+
   /* Container for image text */
   .caption-container {
     text-align: center;
@@ -423,25 +423,25 @@ a:link {
     padding: 2px 16px;
     color: white;
   }
-  
+
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   /* Six columns side by side */
   .column {
     float: left;
     object-fit: cover;
     width: 25%;
   }
-  
+
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;
   }
-  
+
   .active,
   .demo:hover {
     opacity: 1;
@@ -500,7 +500,7 @@ a:link {
 }
 .con-inner-contact {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap:10px;
     align-items: center;
@@ -508,7 +508,7 @@ a:link {
 .LI-img {
     display: flex;
     /* border-radius: 5px; */
-    max-width: 50px;
+    max-width: 40px;
     /* height: 50%; */
 }
 
@@ -607,7 +607,26 @@ a:link {
     position: fixed;
     width: 100%;
     bottom: 0;
-    z-index: 1000; 
+    z-index: 1000;
+}
+.con-inner-contact-extended {
+    /* display: none; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:10px;
+    align-items: center;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+#dynamic-footer.expanded .con-inner-contact-extended{
+    max-height: 95px;
+    opacity: 1;
+}
+#dynamic-footer.expanded .con-inner-contact{
+    max-height: 0px;
+    opacity: 0;
 }
 .footer2 {
     background: rgba(0, 0, 0, 0.5);
@@ -709,7 +728,7 @@ a:link {
     .LI-img {
         display: flex;
         /* border-radius: 5px; */
-        max-width: 30px;
+        max-width: 20px;
         /* height: 50%; */
     }
     .quote-name{

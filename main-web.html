@@ -22,7 +22,7 @@
                         <li><a href="#what">ARIS</a></li>
                         <li><a href="#who">About Us</a></li>
                         <li><a href="#pub">Our Future</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#bottom">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -78,7 +78,7 @@
                     </video>
                     <div class="tile-text">
                         <h3>Objective</h3>
-                        <p>ARIS, the Autonomous Riser Inspection System, aims to reduce cable maintenance costs for Floating Offshore Wind Turbines by up to 75%, using innovative on-cable inspection.</p>
+                        <p>ARIS' design is focused on providing wind farm operators with accurate, robust and useful data about the condition of their cables in a safe and cost-effective manner, reducing risk both to the cable and any personnel undertaking inspections.</p>
                     </div>
                 </div>
                 <div class="tile">
@@ -97,7 +97,7 @@
                     </video>
                     <div class="tile-text">
                         <h3>Sensing</h3>
-                        <p>A 360 degree inspection can be achieved, and defects localised to 3% accuracy using odometry. ARIS has so-far been demonstrated for visual inspections, using a machine vision algorithm to autonomously identify damage to the cable sheath. Commercially available EMF, ultrasonic or thermal sensors will identify hidden defects, like water ingress or conductor issues.</p>
+                        <p>A 360 degree inspection can be achieved, and defects localised to 3% accuracy using odometry. ARIS has currently been demonstrated for visual inspections, using a machine vision algorithm to autonomously identify damage to the cable sheath. Commercially available EMF, ultrasonic or thermal sensors will identify hidden defects, such as water ingress or conductor issues.</p>
                     </div>
                 </div>
                 <div class="tile">
@@ -222,9 +222,9 @@
                     <h2>About Us</h2>
                     <p>The team has a professional background solving challenging engineering problems in a range of sectors including nuclear robotics, fusion energy and maritime. The experience gained in these sectors allows RAM Robotics to deliver bespoke, first of a kind solutions capable of safely operating in extreme conditions.</p> 
                     <p></p>
-                    <p>The team was first formed at the University of Southampton for a group design project, where the resulting research into floating off-shore wind O&M highlighted unique challenges faced by the industry. As a key technology in the endeavor to meet net zero, the team (being engineers) looked for a solution. The problem of premature riser cable failure was selected and the ARIS project was born.</p>
+                    <p>The team was first formed at the University of Southampton for a group design project, where the resulting research into floating off-shore wind O&M highlighted unique challenges faced by the industry. As a key technology in the endeavour to meet net zero, the team (being engineers) looked for a solution. The problem of premature riser cable failure was selected and the ARIS project was born.</p>
                     <p></p>
-                    <p>After completed masters degrees in engineering, ARIS was put on pause and the team went separate ways gaining a diverse professional engineering experience in a range of industries.</p>  
+                    <p>Following completion of Masters Degrees in Engineering, the team put ARIS on hold whilst the members went their separate ways, gaining diverse professional engineering experience in a range of industries.</p>  
                     <p></p>
                     <p>Now as a small agile team of ambitious engineers, we are back as RAM Robotics Ltd to take on challenging maintenance and inspection problems - starting with riser cable failures.</p>     
                 </div>
@@ -247,21 +247,21 @@
                     <img class="tile-img" src="Media/Cable Video 10298.jpg">
                     <div class="tile-text">
                         <h3>Funding and Innovation</h3>
-                        <p>Having taken the first step by setting up RAM Robotics we are now looking for funding to continue the technical development of ARIS</p>
+                        <p>Having taken the first step by setting up RAM Robotics we are now looking for funding to continue the technical development of ARIS.</p>
                     </div>
                 </div>
                 <div class="tile">
                     <img class="tile-img" src="Media/Picture4.jpg">
                     <div class="tile-text">
-                        <h3>Proof of concept</h3>
-                        <p>Take historical achievements and lessons learnt to develop a functioning proof of concept</p>
+                        <h3>Proof of Concept</h3>
+                        <p>We will take historical achievements and lessons learned from our collective experience to develop a functioning proof of concept that delivers on Stakeholder Requirements.</p>
                     </div>
                 </div>
                 <div class="tile">
                     <img class="tile-img" src="Media/Rear Iso.png">
                     <div class="tile-text">
                         <h3>Industry Partners</h3>
-                        <p>Collaborating with leading entities in the offshore industry will be key to ARIS addressing their needs as effectively as possible</p>
+                        <p>Collaborating with leading entities in the offshore industry will be key to ARIS addressing their needs as effectively as possible.</p>
                     </div>
                 </div>
             </div>
@@ -295,17 +295,24 @@
         </div> -->
     </footer>
 
-    <footer class="footer">
+    <a name="bottom"></a>
+
+    <footer class="footer" id="dynamic-footer">
         <div class="container-footer">
-            <div class = "con-inner-contact">
+            <div class = "con-inner-contact-extended">
                 <div class="con-text">
                     <h2>Contact Us</h2>
                     <p>If you'd like to learn more or get in contact with the team, you can contact us on <a href="mailto:info@ramrobotics.co.uk">info@ramrobotics.co.uk</a>. Or visit us on LinkedIn.</p>
                 </div>
                 <a href = "https://www.linkedin.com/company/ram-robotics/"><img class="LI-img" src="Media/LI-In-Bug white.png"></a>
+                <a href = "mailto:info@ramrobotics.co.uk"><img class="LI-img" src="Media/rough email icon.png"></a>
+            </div>
+            <div class = "con-inner-contact">
+                <a href = "https://www.linkedin.com/company/ram-robotics/"><img class="LI-img" src="Media/LI-In-Bug white.png"></a>
+                <a href = "mailto:info@ramrobotics.co.uk"><img class="LI-img" src="Media/rough email icon.png"></a>
             </div>
             <div class="copyright">
-                <p></br></p>
+                <!-- <p></br></p> -->
                 <p>&copy; 2024 RAM Robotics Ltd. All Rights Reserved.</p>
             </div>
         </div>
@@ -345,5 +352,20 @@
             allVideos.forEach(video => video.pause());
         }
     </script> -->
+    <script>
+        document.addEventListener('scroll', () => {
+            const footer = document.getElementById('dynamic-footer');
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+
+            // Check if the user has scrolled to the bottom of the page
+            if (scrollTop + windowHeight >= docHeight) {
+                footer.classList.add('expanded');
+            } else {
+                footer.classList.remove('expanded');
+            }
+        });
+    </script>
 </body>
 </html>
