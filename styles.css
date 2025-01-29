@@ -505,6 +505,14 @@ a:link {
     gap:10px;
     align-items: center;
 }
+.con-inner-contact a {
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+.con-inner-contact a:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+}
 .LI-img {
     display: flex;
     /* border-radius: 5px; */
@@ -624,10 +632,10 @@ a:link {
     max-height: 95px;
     opacity: 1;
 }
-#dynamic-footer.expanded .con-inner-contact{
+/* #dynamic-footer.expanded .con-inner-contact{
     max-height: 0px;
     opacity: 0;
-}
+} */
 .footer2 {
     background: rgba(0, 0, 0, 0.5);
     color: rgba(0, 0, 0, 0.5);
@@ -658,6 +666,18 @@ a:link {
 }
 .copyright p {
     font-size: 10px;
+}
+.envelope {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.envelope-flap {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center top;
+}
+
+.envelope:hover .envelope-flap {
+    transform: rotateX(180deg);
 }
 
 @media (max-width: 768px) {
@@ -728,7 +748,7 @@ a:link {
     .LI-img {
         display: flex;
         /* border-radius: 5px; */
-        max-width: 20px;
+        /* max-width: 20px; */
         /* height: 50%; */
     }
     .quote-name{
